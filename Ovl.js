@@ -61,7 +61,7 @@ async function startPrincipalSession() {
     keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "debug" }))
   },
   logger: pino({ level: "debug" }),
-  browser: Browsers.ubuntu('chrome'),
+  browser: Browsers.macOS("Safari"),
   markOnlineOnConnect: true,
   msgRetryCounterCache,
   syncFullHistory: false
