@@ -58,9 +58,9 @@ async function startPrincipalSession() {
   version,
   auth: {
     creds: state.creds,
-    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }))
+    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "debug" }))
   },
-  logger: pino({ level: "silent" }),
+  logger: pino({ level: "debug" }),
   browser: Browsers.macOS("Safari"),
   markOnlineOnConnect: true,
   msgRetryCounterCache,
