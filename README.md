@@ -59,7 +59,7 @@
 
 #### <img src="https://img.shields.io/badge/Koyeb-000000?style=for-the-badge&logo=koyeb&logoColor=white" height="28" />
 - Créez un compte : [Lien Koyeb](https://app.koyeb.com/auth/signup)
-- Déploiement rapide : [Déployer sur Koyeb](https://app.koyeb.com/deploy?type=git&name=ovl-md&repository=https%3A%2F%2Fgithub.com%2FAinz-devs%2FOVL-MD-V2&branch=main&builder=dockerfile&env%5BPREFIXE%5D=%F0%9F%97%BF&env%5BNOM_OWNER%5D=Ainz&env%5BNUMERO_OWNER%5D=226xxxxxxxx&env%5BMODE%5D=public&env%5BSESSION_ID%5D=ovl&env%5BDATABASE%5D=&env%5BLEVEL_UP%5D=non&env%5BSTICKER_PACK_NAME%5D=Wa-sticker&env%5BSTICKER_AUTHOR_NAME%5D=OVL-MD&instance_type=free)
+- Déploiement rapide : [Déployer sur Koyeb](https://app.koyeb.com/deploy?type=git&name=ovl-md&repository=https%3A%2F%2Fgithub.com%2FAinz-devs%2FOVL-MD-V2&branch=main&builder=dockerfile&instance_type=free&env%5BPREFIXE%5D=.&env%5BNOM_OWNER%5D=Ainz&env%5BNUMERO_OWNER%5D=226xxxxxxxx&env%5BMODE%5D=public&env%5BSESSION_ID%5D=&env%5BSTICKER_PACK_NAME%5D=%E1%B4%8F%E1%B4%A0%CA%9F-%E1%B4%8D%E1%B4%85-%E1%B4%A0%F0%9D%9F%B8&env%5BSTICKER_AUTHOR_NAME%5D=%E1%B4%80%C9%AA%C9%B4%E1%B4%A2%F0%9F%94%85%E2%9C%A8)
 
 #### <img src="https://img.shields.io/badge/Panel-grey?style=for-the-badge&logo=windows-terminal&logoColor=white" height="28" />
 - Créez un serveur
@@ -78,38 +78,109 @@
   <summary>📝 Fichier index.js ou main.js pour déploiement sur panel</summary>
 
 ```js
-const { writeFileSync, existsSync, mkdirSync } = require('fs');
-const { spawnSync } = require('child_process');
-const path = require('path');
+const { spawnSync, spawn } = require('child_process');
+const { existsSync, mkdirSync, writeFileSync } = require('fs');
 
-const env_file = ``; // Ajoutez ici vos variables d'environnement
+// Ajoutez ici vos variables d'environnement
+const env_file = ``;
 
 if (!env_file.trim()) {
-  console.error("Aucune donnée de configuration dans 'env_file'. Remplissez les infos.");
+  console.error("❌ 'env_file' est vide. Veuillez renseigner vos variables d'environnement avant de lancer le script.");
   process.exit(1);
 }
 
-const envPath = path.join(__dirname, 'ovl', '.env');
+let crashCount = 0;
+const crashLimit = 5;
+let lastCrashTime = Date.now();
+const crashResetDelay = 30000;
 
-function runCommand(command, args, options = {}) {
-  const result = spawnSync(command, args, { stdio: 'inherit', ...options });
-  if (result.error || result.status !== 0) {
-    throw new Error(`Erreur lors de l'exécution : ${command} ${args.join(' ')}`);
+function setupProject() {
+  if (!existsSync('ovl')) {
+    const clone = spawnSync('git', ['clone', 'https://github.com/Ainz-devs/OVL-MD-V2', 'ovl'], { stdio: 'inherit' });
+    if (clone.status !== 0) process.exit(1);
+  }
+
+  if (!existsSync('ovl/.env')) {
+    mkdirSync('ovl', { recursive: true });
+    writeFileSync('ovl/.env', env_file);
+    console.log("✅ Fichier .env créé avec succès.");
+  }
+
+  const install = spawnSync('npm', ['install'], { cwd: 'ovl', stdio: 'inherit' });
+  if (install.status !== 0) process.exit(1);
+}
+
+function validateSetup() {
+  if (!existsSync('ovl/package.json')) {
+    process.exit(1);
+  }
+
+  const check = spawnSync('npm', ['ls'], { cwd: 'ovl', stdio: 'ignore' });
+
+  if (check.status !== 0) {
+    const reinstall = spawnSync('npm', ['install'], { cwd: 'ovl', stdio: 'inherit' });
+    if (reinstall.status !== 0) {
+      process.exit(1);
+    }
   }
 }
 
-if (!existsSync('ovl')) {
-  console.log("Clonage...");
-  runCommand('git', ['clone', 'https://github.com/Ainz-devs/OVL-MD-V2', 'ovl']);
-  runCommand('npm', ['install'], { cwd: 'ovl' });
+function launchApp() {
+  const pm2 = spawn('npx', ['pm2', 'start', 'Ovl.js', '--name', 'ovl-md', '--attach'], {
+    cwd: 'ovl',
+    stdio: ['pipe', 'pipe', 'pipe'],
+  });
+
+  let restartAttempts = 0;
+
+  pm2.stdout?.on('data', (chunk) => {
+    const output = chunk.toString();
+    console.log(output);
+    if (output.includes('Connexion') || output.includes('ready')) {
+      restartAttempts = 0;
+    }
+  });
+
+  pm2.stderr?.on('data', (chunk) => {
+    const output = chunk.toString();
+    if (output.includes('restart')) {
+      restartAttempts++;
+      if (restartAttempts > 3) {
+        spawnSync('npx', ['pm2', 'delete', 'ovl-md'], { cwd: 'ovl', stdio: 'inherit' });
+        startNodeFallback();
+      }
+    }
+  });
+
+  pm2.on('exit', () => {
+    startNodeFallback();
+  });
+
+  pm2.on('error', () => {
+    startNodeFallback();
+  });
 }
 
-if (!existsSync(envPath)) {
-  mkdirSync(path.dirname(envPath), { recursive: true });
-  writeFileSync(envPath, env_file.trim());
+function startNodeFallback() {
+  const child = spawn('node', ['Ovl.js'], { cwd: 'ovl', stdio: 'inherit' });
+
+  child.on('exit', (code) => {
+    const now = Date.now();
+    if (now - lastCrashTime > crashResetDelay) crashCount = 0;
+    crashCount++;
+    lastCrashTime = now;
+
+    if (crashCount > crashLimit) {
+      return;
+    }
+
+    startNodeFallback();
+  });
 }
 
-runCommand('npm', ['run', 'Ovl'], { cwd: 'ovl' });
+setupProject();
+validateSetup();
+launchApp();
 ```
 
 </details>
@@ -156,16 +227,13 @@ jobs:
   <summary>🔐 Exemple de fichier .env</summary>
 
 ```env
-PREFIXE=🗿
+PREFIXE=.
 NOM_OWNER=Ainz
 NUMERO_OWNER=226xxxxxxxx
 MODE=public
-SESSION_ID=ovl
-DATABASE=
-LEVEL_UP=non
-STICKER_PACK_NAME=Wa-sticker
-STICKER_AUTHOR_NAME=OVL-MD
-RENDER_API_KEY=
+SESSION_ID=
+STICKER_PACK_NAME=ᴏᴠʟ-ᴍᴅ-ᴠ𝟸
+STICKER_AUTHOR_NAME=ᴀɪɴᴢ🔅✨
 ```
 
 </details>

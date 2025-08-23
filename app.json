@@ -29,27 +29,17 @@
     },
     "SESSION_ID": {
       "description": "Identifiant de session",
-      "value": "ovl",
-      "required": true
-    },
-    "DATABASE": {
-      "description": "Lien de la base de données PostgreSQL",
       "value": "",
-      "required": false
-    },
-    "LEVEL_UP": {
-      "description": "Activer le système de niveau (oui ou non)",
-      "value": "non",
-      "required": false
+      "required": true
     },
     "STICKER_PACK_NAME": {
       "description": "Nom du pack de stickers",
-      "value": "Wa-sticker",
+      "value": "ᴏᴠʟ-ᴍᴅ-ᴠ𝟸",
       "required": false
     },
     "STICKER_AUTHOR_NAME": {
       "description": "Auteur du sticker",
-      "value": "ᴏᴠʟ-ᴍᴅ-ᴠ𝟸",
+      "value": "ᴀɪɴᴢ🔅✨",
       "required": false
     }
   },
