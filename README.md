@@ -255,6 +255,8 @@ Partage, pose tes questions, et reste à jour avec toutes les nouveautés du pro
 ---
 ### 🙌 Remerciements
 - Haibo_lugh – pour son soutien et aide dans la gestion du bot au support.
+- Nathan Harmone – pour ses tutoriels YouTube.
+- Dr Djibi – pour son soutien.
 ---
 ### 📄 Licence
 

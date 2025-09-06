@@ -42,7 +42,7 @@ async function eval_exec(ovl, {
           repondre(`Erreur :\n${stderr}`).then(resolve);
         } else {
           const output = stdout || "Commande exécutée sans sortie.";
-          repondre(output, ovl.user.id).then(resolve);
+          repondre(output).then(resolve);
         }
       });
     });

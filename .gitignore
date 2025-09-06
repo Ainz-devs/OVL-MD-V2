@@ -3,3 +3,4 @@ node_modules/
 *.db
 config_env.json
 cache_jid.json
+store_msg.json
