@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.1",
-    "@whiskeysockets/baileys": "npm:ovl-baileys@1.0.0",
+    "@whiskeysockets/baileys": "npm:ovl-baileys@2.0.0",
     "adm-zip": "^0.5.16",
     "axios": "^1.8.4",
     "canvacord": "^6.0.2",
