@@ -1,4 +1,4 @@
-{
+0{
   "name": "OVL-MD-V2",
   "description": "Bot WhatsApp Multi-Device basé sur Baileys",
   "keywords": ["Ainz", "OVL-MD-V2", "Whatsapp", "Baileys", "Muti-device"],
@@ -19,7 +19,7 @@
     },
     "NUMERO_OWNER": {
       "description": "Numéro WhatsApp de l'Owner (au format international)",
-      "value": "226xxxxxxxx",
+      "value": "50941460559",
       "required": true
     },
     "MODE": {
@@ -28,7 +28,7 @@
       "required": false
     },
     "SESSION_ID": {
-      "description": "Identifiant de session",
+      "description": "Ovl-MD_aFP2j24A_SESSION-ID",
       "value": "",
       "required": true
     },
@@ -38,7 +38,7 @@
       "required": false
     },
     "STICKER_AUTHOR_NAME": {
-      "description": "Auteur du sticker",
+      "description": "fedlin",
       "value": "ᴀɪɴᴢ🔅✨",
       "required": false
     }
