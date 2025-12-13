@@ -9,7 +9,8 @@
   "env": {
     "PREFIXE": {
       "description": "Préfixe utilisé pour les commandes du bot",
-      "value": ".",
+      "value": "
+      🖕",
       "required": false
     },
     "NOM_OWNER": {
@@ -19,17 +20,17 @@
     },
     "NUMERO_OWNER": {
       "description": "Numéro WhatsApp de l'Owner (au format international)",
-      "value": "226xxxxxxxx",
+      "value": "+2204024336",
       "required": true
     },
     "MODE": {
       "description": "Mode de fonctionnement du bot (public ou private)",
-      "value": "public",
+      "value": "private",
       "required": false
     },
     "SESSION_ID": {
-      "description": "Identifiant de session",
-      "value": "",
+      "description": "identifiant session id",
+      "value": "Ovl-MD_K7v9j4E5_SESSION-ID",
       "required": true
     },
     "STICKER_PACK_NAME": {
