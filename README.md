@@ -37,15 +37,12 @@
 
 📌 **Conserve la Session-ID dans un endroit sécurisé.** 
 
-[![Obtenir SESSION-ID](https://img.shields.io/badge/Obtenir%20SESSION--ID1-0A0A0A?style=for-the-badge&logo=key&logoColor=white)](https://premier-armadillo-ovl-02d9d108.koyeb.app/)  
-[![Obtenir SESSION-ID](https://img.shields.io/badge/Obtenir%20SESSION--ID2-0A0A0A?style=for-the-badge&logo=key&logoColor=white)](https://ruling-alma-ahc-ec8ca560.koyeb.app/)  
-[![Obtenir SESSION-ID](https://img.shields.io/badge/Obtenir%20SESSION--ID3-0A0A0A?style=for-the-badge&logo=key&logoColor=white)](https://shivering-lizzy-fatao177-3ee3096c.koyeb.app/)
+[![Obtenir SESSION-ID](https://img.shields.io/badge/Obtenir%20SESSION--ID-0A0A0A?style=for-the-badge&logo=key&logoColor=white)](https://ovl-web.koyeb.app/)  
 
 ---
 
-### 🗄️ Étape 3 : Créer une base de données  
+### 🗄️ Étape 3 : Créer une base de données  (au choix)
 [![Créer Base de Données](https://img.shields.io/badge/Supabase-Base%20de%20donn%C3%A9es-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
-> Ou utilise une base de données existante.
 
 ### 🚀 Étape 4 : Méthodes de déploiement
 
@@ -59,7 +56,7 @@
 
 #### <img src="https://img.shields.io/badge/Koyeb-000000?style=for-the-badge&logo=koyeb&logoColor=white" height="28" />
 - Créez un compte : [Lien Koyeb](https://app.koyeb.com/auth/signup)
-- Déploiement rapide : [Déployer sur Koyeb](https://app.koyeb.com/deploy?type=git&name=ovl-md&repository=https%3A%2F%2Fgithub.com%2FAinz-devs%2FOVL-MD-V2&branch=main&builder=dockerfile&instance_type=free&env%5BPREFIXE%5D=.&env%5BNOM_OWNER%5D=Ainz&env%5BNUMERO_OWNER%5D=226xxxxxxxx&env%5BMODE%5D=public&env%5BSESSION_ID%5D=&env%5BSTICKER_PACK_NAME%5D=%E1%B4%8F%E1%B4%A0%CA%9F-%E1%B4%8D%E1%B4%85-%E1%B4%A0%F0%9D%9F%B8&env%5BSTICKER_AUTHOR_NAME%5D=%E1%B4%80%C9%AA%C9%B4%E1%B4%A2%F0%9F%94%85%E2%9C%A8)
+- Déploiement rapide : [Déployer sur Koyeb](https://app.koyeb.com/deploy?type=git&name=ovl-md&repository=https%3A%2F%2Fgithub.com%2FAinz-devs%2FOVL-MD-V2&branch=main&builder=dockerfile&instance_type=free&env%5BPREFIXE%5D=.&env%5BNOM_OWNER%5D=Ainz&env%5BNUMERO_OWNER%5D=226xxxxxxxx&env%5BMODE%5D=public&env%5BSESSION_ID%5D=&env%5BSTICKER_PACK_NAME%5D=%E1%B4%8F%E1%B4%A0%CA%9F-%E1%B4%8D%E1%B4%85-%E1%B4%A0%F0%9D%9F%B8&env%5BSTICKER_AUTHOR_NAME%5D=%E1%B4%80%C9%AA%C9%B4%E1%B4%A2%F0%9F%94%85%E2%9C%A8&env%5BNOM_BOT%5D=%F0%9F%A4%96+OVL-MD+BOT+V2)
 
 #### <img src="https://img.shields.io/badge/Panel-grey?style=for-the-badge&logo=windows-terminal&logoColor=white" height="28" />
 - Créez un serveur
@@ -234,6 +231,7 @@ MODE=public
 SESSION_ID=
 STICKER_PACK_NAME=ᴏᴠʟ-ᴍᴅ-ᴠ𝟸
 STICKER_AUTHOR_NAME=ᴀɪɴᴢ🔅✨
+NOM_BOT=🤖 OVL-MD BOT V2
 ```
 
 </details>
@@ -242,7 +240,7 @@ STICKER_AUTHOR_NAME=ᴀɪɴᴢ🔅✨
 
 ### 🌍 Rejoins la Communauté OVL
 
-[![WhatsApp Support](https://img.shields.io/badge/Support%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/HzhikAmOuYhFXGLmcyMo62)
+[![WhatsApp Support](https://img.shields.io/badge/Support%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BP1oOMh0QvR7H3vvO9bRYK)
 [![Telegram Channel](https://img.shields.io/badge/Canal%20Telegram-229ED9?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ovlmd_tlg)
 [![WhatsApp Channel](https://img.shields.io/badge/Channel%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VayTmvxHltYGCm0J7P0A)
 

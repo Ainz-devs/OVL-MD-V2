@@ -32,6 +32,11 @@
       "value": "",
       "required": true
     },
+    "NOM_BOT": {
+      "description": "Nom du bot",
+      "value": "🤖 OVL-MD BOT V2",
+      "required": false
+    },
     "STICKER_PACK_NAME": {
       "description": "Nom du pack de stickers",
       "value": "ᴏᴠʟ-ᴍᴅ-ᴠ𝟸",

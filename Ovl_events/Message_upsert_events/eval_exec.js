@@ -1,7 +1,7 @@
 const util = require('util');
 const { exec } = require('child_process');
 
-async function eval_exec(ovl, {
+async function eval_exec(ovl, func, {
   verif_Groupe,
   mbre_membre,
   membre_Groupe,
@@ -27,7 +27,8 @@ async function eval_exec(ovl, {
   ms_org,
   texte,
   getJid,
-  quote
+  quote,
+  m
 }) {
   if (!dev_id || !texte) return;
 
@@ -37,9 +38,9 @@ async function eval_exec(ovl, {
     await new Promise((resolve) => {
       exec(cmd, (error, stdout, stderr) => {
         if (error) {
-          repondre(`Erreur d'exécution :\n${error.message}`).then(resolve);
+          repondre(`Erreur d'exécution :\n${error.message}`, id_Bot).then(resolve);
         } else if (stderr) {
-          repondre(`Erreur :\n${stderr}`).then(resolve);
+          repondre(`Erreur :\n${stderr}`, id_Bot).then(resolve);
         } else {
           const output = stdout || "Commande exécutée sans sortie.";
           repondre(output).then(resolve);
@@ -64,7 +65,7 @@ async function eval_exec(ovl, {
       await repondre(output);
     } catch (error) {
       const err = util.inspect(error, { depth: 1 });
-      await repondre(`Erreur dans le code JS:\n${err}`, ovl.user.id);
+      await repondre(`Erreur dans le code JS:\n${err}`, id_Bot);
     }
   }
 }
