@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAGONFLY MD WHISPER - Advanced WhatsApp Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #001122 0%, #003366 100%);
+            border-bottom: 3px solid #00ffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 128, 255, 0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #00ffff, #0080ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px #00ffff, 0 0 60px #0080ff;
+            margin-bottom: 20px;
+            position: relative;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #00ffff;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        .typing-animation {
+            font-size: 1.2rem;
+            color: #00ffff;
+            border-right: 2px solid #00ffff;
+            animation: blink 1s infinite;
+            display: inline-block;
+            padding-right: 5px;
+        }
+
+        /* Profile Image */
+        .profile-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #00ffff;
+            box-shadow: 
+                0 0 30px #00ffff,
+                0 0 50px #0080ff,
+                0 0 70px #00ffff;
+            animation: glow-pulse 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Grid */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #001122 0%, #003366 100%);
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #002244 0%, #004488 100%);
+            box-shadow: 0 0 20px #00ffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+            color: #001122;
+            border: 2px solid #00ffff;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #00e6e6 0%, #0066cc 100%);
+            box-shadow: 0 0 30px #00ffff;
+        }
+
+        /* Sections */
+        .section {
+            background: rgba(0, 17, 34, 0.8);
+            border: 1px solid #00ffff;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+        }
+
+        .section-title {
+            color: #00ffff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: rgba(0, 34, 68, 0.6);
+            border: 1px solid #0080ff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffff, #0080ff, #00ffff);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #00ffff, #0080ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-title {
+            color: #00ffff;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Progress */
+        .skill-item {
+            margin: 20px 0;
+        }
+
+        .skill-name {
+            color: #00ffff;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-bar {
+            background: #001122;
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+            border: 1px solid #0080ff;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #00ffff, #0080ff);
+            border-radius: 10px;
+            animation: fillBar 2s ease-in-out;
+            position: relative;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Metrics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .metric-item {
+            padding: 20px;
+        }
+
+        .metric-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ffff, #0080ff);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #001122;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+            border: 3px solid #00ffff;
+        }
+
+        .metric-title {
+            color: #00ffff;
+            margin-bottom: 5px;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #001122;
+            border: 1px solid #0080ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: '⚡ TERMINAL';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #001122;
+            padding: 0 10px;
+            color: #00ffff;
+            font-size: 0.8rem;
+        }
+
+        .code {
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .comment { color: #0080ff; }
+        .command { color: #00ffff; }
+        .text { color: #ffffff; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #001122 0%, #003366 100%);
+            border-top: 3px solid #00ffff;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, #0080ff, #00ffff, transparent);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-btn {
+            padding: 10px 20px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            color: #00ffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .stat-btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px #00ffff;
+        }
+
+        /* Animations */
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px #00ffff, 0 0 30px #0080ff; }
+            100% { text-shadow: 0 0 30px #00ffff, 0 0 50px #0080ff, 0 0 60px #00ffff; }
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px #00ffff, 0 0 30px #0080ff;
+            }
+            50% { 
+                box-shadow: 0 0 30px #00ffff, 0 0 50px #0080ff, 0 0 70px #00ffff;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: #00ffff; }
+            50% { border-color: transparent; }
+        }
+
+        @keyframes fillBar {
+            from { width: 0%; }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .button-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .metrics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">💠 𝔻𝕣𝕒𝕘𝕠𝕟𝕗𝕝𝕪 ✦ 𝕄𝔻 WHISPER 💠</h1>
+            <p class="subtitle">Advanced Multi-Device WhatsApp Bot</p>
+            <div class="typing-animation">
+                NEXT GENERATION WHATSAPP BOT • MULTI-DEVICE SUPPORT • MODULAR ARCHITECTURE
+            </div>
+        </header>
+
+        <!-- Profile Image -->
+        <div class="profile-container">
+            <img src="https://files.catbox.moe/hwuaw2.png" alt="𝔻𝕣𝕒𝕘𝕠𝕟𝕗𝕝𝕪 ✦ 𝕄𝔻" class="profile-image">
+        </div>
+
+        <!-- Quick Access Buttons -->
+        <div class="button-grid">
+            <a href="https://github.com/rentech12/DRAGONFLY/archive/refs/heads/main.zip" class="btn btn-primary">
+                📥 DOWNLOAD ZIP
+            </a>
+            <a href="https://wa.me/50934264629" class="btn">
+                👑 OWNER CONTACT
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbBUyP06rsQnzQWRVO3p" class="btn">
+                📢 OFFICIAL CHANNEL
+            </a>
+            <a href="https://github.com/rentech12/DRAGONFLY/fork" class="btn">
+                🍴 FORK REPOSITORY
+            </a>
+        </div>
+
+        <!-- Deployment Buttons -->
+        <div class="section">
+            <h2 class="section-title">🚀 DEPLOYMENT</h2>
+            <div class="button-grid">
+                <a href="https://bot-hosting.net/?aff=1436269328306671689" class="btn btn-primary">
+                    🖥️ DEPLOY ON PANEL
+                </a>
+                <a href="https://heroku.com/deploy" class="btn">
+                    ☁️ DEPLOY ON HEROKU
+                </a>
+                <a href="https://render.com/deploy" class="btn">
+                    🚀 DEPLOY ON RENDER
+                </a>
+                <a href="https://dashboard.katabump.com/auth/login#38a45a" class="btn">
+                    🔗 KATABUMP
+                </a>
+                <a href="#" class="btn">
+                    🔐 PAIR CODE
+                </a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="section">
+            <h2 class="section-title">🌟 FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI Chatbot</h3>
+                    <p>Advanced GPT-powered conversations with natural language processing</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3 class="feature-title">Media Downloader</h3>
+                    <p>Download from YouTube, Instagram, TikTok and other platforms</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Group Manager</h3>
+                    <p>Advanced moderation tools and automated group management</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Entertainment</h3>
+                    <p>Games, stickers, fun commands and interactive features</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Security</h3>
+                    <p>Anti-spam, anti-link protection and secure operations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Multi-Device</h3>
+                    <p>Baileys multi-device support for seamless operation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">📊 TECHNICAL SKILLS</h2>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span>100%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Baileys MD</span>
+                    <span>100%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>API Integration</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">
+                    <span>Security</span>
+                    <span>98%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 98%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="section">
+            <h2 class="section-title">⚡ PERFORMANCE METRICS</h2>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-circle">🚀</div>
+                    <h3 class="metric-title">Response Time</h3>
+                    <p>&lt; 1 Second</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-circle">📈</div>
+                    <h3 class="metric-title">Uptime</h3>
+                    <p>99.9%</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-circle">💾</div>
+                    <h3 class="metric-title">Memory Usage</h3>
+                    <p>&lt; 100MB</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-circle">🔧</div>
+                    <h3 class="metric-title">Stability</h3>
+                    <p>24/7 Active</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Commands -->
+        <div class="section">
+            <h2 class="section-title">🎯 QUICK COMMANDS</h2>
+            <div class="code-block">
+                <div class="code">
+                    <span class="comment"># Bot Prefix: . (dot)</span><br><br>
+                    <span class="command">.help</span> <span class="text"># Show all commands</span><br>
+                    <span class="command">.menu</span> <span class="text"># Display main menu</span><br>
+                    <span class="command">.owner</span> <span class="text"># Contact owner</span><br>
+                    <span class="command">.chatbot</span> <span class="text"># AI chatbot</span><br>
+                    <span class="command">.play</span> <span class="text"># Download music</span><br>
+                    <span class="command">.sticker</span> <span class="text"># Create stickers</span><br>
+                    <span class="command">.tagall</span> <span class="text"># Mention all members</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3>🌟 STAR THIS REPOSITORY IF YOU LIKE DRAGONFLY MD! 🌟</h3>
+            <div class="stats">
+                <a href="https://github.com/rentech12/DRAGONFLY/stargazers" class="stat-btn">
+                    ⭐ Stars
+                </a>
+                <a href="https://github.com/rentech12/DRAGONFLY/network/members" class="stat-btn">
+                    🍴 Forks
+                </a>
+                <a href="https://github.com/rentech12/DRAGONFLY/issues" class="stat-btn">
+                    🐛 Issues
+                </a>
+            </div>
+            <p>💫 Built with ❤️ by <strong style="color: #00ffff;">REN TECH</strong> 💫</p>
+        </footer>
+    </div>
+
+    <script>
+        // Typing animation effect
+        const texts = [
+            "NEXT GENERATION WHATSAPP BOT",
+            "MULTI-DEVICE SUPPORT", 
+            "MODULAR ARCHITECTURE",
+            "SECURE & FAST",
+            "24/7 ACTIVE"
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingElement = document.querySelector('.typing-animation');
+        
+        function typeWriter() {
+            if (charIndex < texts[textIndex].length) {
+                typingElement.innerHTML = texts[textIndex].substring(0, charIndex + 1) + '<span style="border-right: 2px solid #00ffff; animation: blink 1s infinite;"></span>';
+                charIndex++;
+                setTimeout(typeWriter, 100);
+            } else {
+                setTimeout(eraseText, 2000);
+            }
+        }
+        
+        function eraseText() {
+            if (charIndex > 0) {
+                typingElement.innerHTML = texts[textIndex].substring(0, charIndex - 1) + '<span style="border-right: 2px solid #00ffff; animation: blink 1s infinite;"></span>';
+                charIndex--;
+                setTimeout(eraseText, 50);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, 500);
+            }
+        }
+        
+        // Start typing animation
+        setTimeout(typeWriter, 1000);
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections for animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
