@@ -249,7 +249,7 @@ Partage, pose tes questions, et reste à jour avec toutes les nouveautés du pro
 ---
 
 ### 👨‍💻 Développeur Principal
-- **Ainz**
+- ** ⷶ ᭄ͫ𝑴𝒆𝒏𝒕𝒐𝒓𝑾𝒉𝒊𝒕𝒆༒**
 ---
 ### 🙌 Remerciements
 - Haibo_lugh – pour son soutien et aide dans la gestion du bot au support.
