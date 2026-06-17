@@ -1,0 +1,50 @@
+.autoreply on/off
+→ Répond automatiquement aux messages privés.
+
+.welcome on/off
+→ Envoie un message de bienvenue aux nouveaux membres.
+
+.goodbye on/off
+→ Envoie un message lorsqu'un membre quitte le groupe.
+
+.antilink on/off
+→ Supprime les messages contenant des liens.
+
+.antispam on/off
+→ Détecte les messages répétés.
+
+.autosticker on/off
+→ Convertit automatiquement les images reçues en stickers.
+
+.autoreact on/off
+→ Réagit automatiquement aux messages avec des emojis.
+
+.afk
+→ Indique que tu es absent et répond aux personnes qui te mentionnent.
+if (message.hasMedia) {
+    const media = await message.downloadMedia();
+    // sauvegarde du fichier reçu
+}
+.schedule
+→ Programme l'envoi automatique d'un message.
+
+.autotag
+→ Mentionne automatiquement les membres à certaines heures.
+
+.level on/off
+→ Attribue des points d'activité aux membres.
+
+.rank
+→ Affiche le classement des membres les plus actifs.
+
+.ai on/off
+→ Active les réponses automatiques par IA.
+
+.filter add <mot> <réponse>
+→ Répond automatiquement à certains mots-clés.
+
+.backup
+→ Sauvegarde les données du bot.
+
+. bypass 
+→enregistré les fichiers envoyés en vue unique 
