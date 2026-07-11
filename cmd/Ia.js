@@ -1,1 +1,99 @@
-const _0x59c70f=_0x4b68;(function(_0x3052f8,_0x391387){const _0x469174=_0x4b68,_0x521b63=_0x3052f8();while(!![]){try{const _0xe1c3ff=-parseInt(_0x469174(0x20c))/0x1+-parseInt(_0x469174(0x239))/0x2*(-parseInt(_0x469174(0x21f))/0x3)+parseInt(_0x469174(0x206))/0x4+-parseInt(_0x469174(0x229))/0x5*(parseInt(_0x469174(0x210))/0x6)+parseInt(_0x469174(0x235))/0x7*(parseInt(_0x469174(0x237))/0x8)+parseInt(_0x469174(0x221))/0x9*(-parseInt(_0x469174(0x240))/0xa)+parseInt(_0x469174(0x236))/0xb*(parseInt(_0x469174(0x22e))/0xc);if(_0xe1c3ff===_0x391387)break;else _0x521b63['push'](_0x521b63['shift']());}catch(_0x24359b){_0x521b63['push'](_0x521b63['shift']());}}}(_0x17a3,0x363fb));const _0x62ee3=(function(){let _0x463784=!![];return function(_0x135ff3,_0x431a89){const _0x4192d8=_0x463784?function(){if(_0x431a89){const _0x4720b1=_0x431a89['apply'](_0x135ff3,arguments);return _0x431a89=null,_0x4720b1;}}:function(){};return _0x463784=![],_0x4192d8;};}()),_0xf430aa=_0x62ee3(this,function(){const _0x4a19e4=_0x4b68,_0x8cabea={'GykPq':_0x4a19e4(0x219)};return _0xf430aa[_0x4a19e4(0x1fb)]()['search'](_0x8cabea['GykPq'])[_0x4a19e4(0x1fb)]()[_0x4a19e4(0x215)](_0xf430aa)[_0x4a19e4(0x238)]('(((.+)+)+)+$');});_0xf430aa();const {ovlcmd}=require(_0x59c70f(0x203)),axios=require('axios');function _0x4b68(_0x5b385f,_0x2970ec){_0x5b385f=_0x5b385f-0x1f2;const _0x2d365e=_0x17a3();let _0xf430aa=_0x2d365e[_0x5b385f];if(_0x4b68['bKeIpg']===undefined){var _0x62ee3=function(_0x257c93){const _0x1530f5='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x19e1d2='',_0x4e7503='',_0x527aad=_0x19e1d2+_0x62ee3;for(let _0x93dd84=0x0,_0x587a21,_0x229aa5,_0x272052=0x0;_0x229aa5=_0x257c93['charAt'](_0x272052++);~_0x229aa5&&(_0x587a21=_0x93dd84%0x4?_0x587a21*0x40+_0x229aa5:_0x229aa5,_0x93dd84++%0x4)?_0x19e1d2+=_0x527aad['charCodeAt'](_0x272052+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x587a21>>(-0x2*_0x93dd84&0x6)):_0x93dd84:0x0){_0x229aa5=_0x1530f5['indexOf'](_0x229aa5);}for(let _0xf4318a=0x0,_0x4e74e1=_0x19e1d2['length'];_0xf4318a<_0x4e74e1;_0xf4318a++){_0x4e7503+='%'+('00'+_0x19e1d2['charCodeAt'](_0xf4318a)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4e7503);};_0x4b68['kmLZyh']=_0x62ee3,_0x4b68['tNsTdB']={},_0x4b68['bKeIpg']=!![];}const _0x17a358=_0x2d365e[0x0],_0x4b6881=_0x5b385f+_0x17a358,_0x40606d=_0x4b68['tNsTdB'][_0x4b6881];if(!_0x40606d){const _0x3f6ab4=function(_0x297505){this['ClAUsM']=_0x297505,this['KRyZWZ']=[0x1,0x0,0x0],this['Aflzen']=function(){return'newState';},this['AThexj']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['igJXGj']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x3f6ab4['prototype']['zIUUnI']=function(){const _0x1319e1=new RegExp(this['AThexj']+this['igJXGj']),_0x36d472=_0x1319e1['test'](this['Aflzen']['toString']())?--this['KRyZWZ'][0x1]:--this['KRyZWZ'][0x0];return this['dKWCIp'](_0x36d472);},_0x3f6ab4['prototype']['dKWCIp']=function(_0x445f8b){if(!Boolean(~_0x445f8b))return _0x445f8b;return this['yeOLNt'](this['ClAUsM']);},_0x3f6ab4['prototype']['yeOLNt']=function(_0x51627){for(let _0x27f4ea=0x0,_0x384576=this['KRyZWZ']['length'];_0x27f4ea<_0x384576;_0x27f4ea++){this['KRyZWZ']['push'](Math['round'](Math['random']())),_0x384576=this['KRyZWZ']['length'];}return _0x51627(this['KRyZWZ'][0x0]);},new _0x3f6ab4(_0x4b68)['zIUUnI'](),_0xf430aa=_0x4b68['kmLZyh'](_0xf430aa),_0x4b68['tNsTdB'][_0x4b6881]=_0xf430aa;}else _0xf430aa=_0x40606d;return _0xf430aa;}function _0x17a3(){const _0x414bce=['t0TwqNC','AffTv0y','ndKYodfgDfj3D0K','rxjYzxvYierbteXfidO','Dgv4Da','D3z0EhK','mJmWmtu0uMrhzujK','rxjYzxvYieDqvca6','vxrPBgLZzsbSj0fqssbNChqGCg91CIbNW6LUW6LYzxiGzgvZihldQxbVBNnLCY4','D0XXrvi','rxjYzxvYieDLBwLUAs1qCM8GoG','y29UC3rYDwn0B3i','Ahr0Chm6lY9HCgKTDg94EgLJlNPVBMuUAwqVyxbPl2fPl2nSyxvKzt9WCM9TChq9','CKTKuve','qxDoyw4','kcGOlISPkYKRksSK','uK5oC3a','rxjYzxvYigXVCNmGzguGBgeGz8oPBSoPCMf0Aw9UigrLigWNAw1Hz2uUifldQwvZC2f5zxOGCgX1CYb0yxjKlG','CMvZCg9UC2u','AvzgC0e','qxrnqKe','m2fXCxDhrG','zxjYB3i','ntq5sNfyu05N','sxr6s0e','sw1YDfG','CKDRDge','ChP1DfO','vxrPBgLZzsbSj0fqssbmBgfTysbWB3vYigFdQw7dQxjLCIbKzxmGCSoPCg9UC2vZlG','BwzUyxC','vxrPBgLZzsbSj0fqssbhzw1PBMKTuhjVihbVDxiGz8oPBSoPCMvYigrLCYbYW6LWB25ZzxmU','mtb4sfb0u04','y2XHDwrL','r0fnEwG','rxjYzxvYigrLihldQxbVBNnLigrLigWNqvbjieDLBwLUAs1qCM8U','AK9grNm','nJqXnJr2BhjgEfm','y29WAwXVDa','Ahr0Chm6lY9HCgKUz3vYDxnLBNnLAs53B3jRzxjZlMrLDI9SBgfTyt9WCM9TChq9','CKnqB1a','z2vTAw5P','DwzeBwm','Ahr0Chm6lY9HCgKTDg94EgLJlNPVBMuUAwqVyxbPl2fPl2jSywnRyM94p3bYB21WDd0','ntzRAwXIrwC','mJjiqvrJuhK','ndaYnty4swPREujA','C2vHCMnO','mZyXnZa2qKfcDg51','u2jfzgG','vMv1AwXSzxOGzw50CMvYihvUzsbKzxnJCMLWDgLVBIbWB3vYigFdQw7dQxjLCIb1BMuGAw1Hz2uU','z2v0','A3fYCxy','zu1wEuW','zgfSBgu','ndyYnZbICvvVz1a','rxjYzxvYienSyxvKzsa6','BxPZCMC','AM9PBG','ygbGug93zxjLzcbcEsbpvKWTtuqTvJjGyga','uKrgELC','u1fvAxu','uuXSyuq','r8oPBSoOCMuGzgvZigLTywDLCYbHDMvJierbteXfluuU','AuDXzNG','q0XNBKq','rxjYzxvYieXSyw1HidO','zgf0yq','z3b0','vMv1AwXSzxOGzw50CMvYihvUihbYB21WDcbWB3vYigFdQw7dQxjLCIb1BMuGCSoPCg9UC2uU','u1PXs0e','BgvUz3rO','vw5LigvYCMv1CIbLC3qGC3vYDMvUDwuGBg9YCYbKzsbSj2fWCgvSimoGigWNqvbjlG','Dg9tDhjPBMC','Dffqwwe','rxjYzxvYienVCgLSB3qGoG','CKXuzwC','rxjYzxvYigrLihldQxbVBNnLigrLigWNqvbjlG','v0vMz0G','C2j1tKe','BgXHBwe','lI4VBgLIl292BgnTza','yxjYyxLIDwzMzxi','C2vUze1LC3nHz2u','mtq1mZm2yxD1vu9S','vxrPBgLZzsbSj0fqssbIBgfJA2jVEcbWB3vYigFdQw7dQxjLCIbKzxmGCSoPCg9UC2vZlG','vxrPBgLZzsbSj0fqssbdBgf1zguGCg91CIbNW6LUW6LYzxiGzgvZihldQxbVBNnLCY4','yMXHy2TIB3G'];_0x17a3=function(){return _0x414bce;};return _0x17a3();}ovlcmd({'nom_cmd':_0x59c70f(0x1f6),'classe':'IA','react':'🤖','desc':_0x59c70f(0x212)},async(_0x21ccbc,_0x35a73d,_0x2af707)=>{const _0x3dd933=_0x59c70f,_0x1c9155={'ItzKA':'Veuillez\x20entrer\x20un\x20prompt\x20pour\x20générer\x20une\x20réponse.','GAMyh':function(_0x3778be,_0x493172){return _0x3778be(_0x493172);},'UwJIx':'Erreur\x20GPT\x20:','eMVyL':function(_0x8101fc,_0x51f21f){return _0x8101fc(_0x51f21f);},'mzsrg':_0x3dd933(0x1fa)},{arg:_0x1212ed,ms:_0x469ba6,repondre:_0x477b77}=_0x2af707;if(!_0x1212ed[_0x3dd933(0x1f9)])return _0x477b77(_0x1c9155[_0x3dd933(0x222)]);const _0x5242bd=_0x1212ed[_0x3dd933(0x243)]('\x20'),_0x2aa34c='https://eliteprotech-apis.zone.id/chatgpt?prompt='+_0x1c9155[_0x3dd933(0x22b)](encodeURIComponent,_0x5242bd);try{const _0x475496=await axios[_0x3dd933(0x23c)](_0x2aa34c),_0x237dc3=_0x475496['data']?.[_0x3dd933(0x21c)]||_0x3dd933(0x1ff);return _0x1c9155[_0x3dd933(0x22b)](_0x477b77,_0x237dc3);}catch(_0x269693){return console[_0x3dd933(0x220)](_0x1c9155['UwJIx'],_0x269693),_0x1c9155[_0x3dd933(0x23e)](_0x477b77,_0x1c9155[_0x3dd933(0x242)]);}}),ovlcmd({'nom_cmd':_0x59c70f(0x23f),'classe':'IA','react':'🎨','desc':_0x59c70f(0x248)},async(_0x5bbe5b,_0x1afe09,_0x4f6c4e)=>{const _0x3748f9=_0x59c70f,_0x40cb87={'hQmWF':function(_0x2bd938,_0x187a98){return _0x2bd938(_0x187a98);},'CLgnD':_0x3748f9(0x23b),'rLTeg':function(_0x5eede9,_0x488f73){return _0x5eede9(_0x488f73);},'iVFsA':_0x3748f9(0x204),'tQPYa':_0x3748f9(0x20d),'rKdQQ':function(_0x41ea3a,_0x841a76){return _0x41ea3a(_0x841a76);},'kqrqv':_0x3748f9(0x21b)},{arg:_0x231bde,ms:_0x307483,repondre:_0x2162f1}=_0x4f6c4e;if(!_0x231bde['length'])return _0x40cb87[_0x3748f9(0x20b)](_0x2162f1,_0x40cb87[_0x3748f9(0x1f3)]);try{const _0x56684a=_0x231bde[_0x3748f9(0x243)]('\x20'),_0x35b07b='https://eliteprotech-apis.zone.id/imagine?prompt='+_0x40cb87[_0x3748f9(0x1fe)](encodeURIComponent,_0x56684a),_0x54ea9c=await axios[_0x3748f9(0x23c)](_0x35b07b,{'responseType':_0x40cb87[_0x3748f9(0x21d)]});return _0x1afe09[_0x3748f9(0x205)](_0x5bbe5b,{'image':_0x54ea9c['data'],'caption':_0x3748f9(0x244)},{'quoted':_0x307483});}catch(_0x545eef){return console[_0x3748f9(0x220)](_0x40cb87[_0x3748f9(0x1fc)],_0x545eef),_0x40cb87[_0x3748f9(0x217)](_0x2162f1,_0x40cb87[_0x3748f9(0x23d)]);}}),ovlcmd({'nom_cmd':_0x59c70f(0x209),'classe':'IA','react':'🖤','desc':_0x59c70f(0x207)},async(_0xb28c7,_0x181950,_0x2522e7)=>{const _0x2265ae=_0x59c70f,_0x23c1f6={'AwNan':function(_0x4ffcf6,_0x2707bc){return _0x4ffcf6(_0x2707bc);},'rGkta':_0x2265ae(0x1f7),'iGqfx':_0x2265ae(0x1ff),'OKVBw':function(_0x50f178,_0x1b3dd3){return _0x50f178(_0x1b3dd3);},'jOFFs':_0x2265ae(0x211),'mfnaw':function(_0x52d859,_0xa07875){return _0x52d859(_0xa07875);},'SQUiu':_0x2265ae(0x1fa)},{arg:_0x18faeb,ms:_0x2570c1,repondre:_0x53f17f}=_0x2522e7;if(!_0x18faeb[_0x2265ae(0x1f9)])return _0x23c1f6[_0x2265ae(0x218)](_0x53f17f,_0x23c1f6[_0x2265ae(0x224)]);const _0x2bc353=_0x18faeb['join']('\x20'),_0x42f2ef=_0x2265ae(0x234)+encodeURIComponent(_0x2bc353);try{const _0x6b61ef=await axios['get'](_0x42f2ef),_0x144f69=_0x6b61ef[_0x2265ae(0x1f5)]?.[_0x2265ae(0x1f5)]||_0x23c1f6[_0x2265ae(0x1f2)];return _0x23c1f6[_0x2265ae(0x20a)](_0x53f17f,_0x144f69);}catch(_0x211c3a){return console[_0x2265ae(0x220)](_0x23c1f6[_0x2265ae(0x22d)],_0x211c3a),_0x23c1f6[_0x2265ae(0x227)](_0x53f17f,_0x23c1f6[_0x2265ae(0x246)]);}}),ovlcmd({'nom_cmd':_0x59c70f(0x22f),'classe':'IA','react':'🤖','desc':'Utilise\x20l\x27API\x20Copilot\x20pour\x20générer\x20des\x20réponses.'},async(_0x5e1a9a,_0x505067,_0x106004)=>{const _0x180e50=_0x59c70f,_0x4324b4={'ufDmc':function(_0x39a159,_0x2359f1){return _0x39a159(_0x2359f1);},'RNNsp':_0x180e50(0x1fd),'sbuNA':_0x180e50(0x1fa)},{arg:_0x2367bb,ms:_0x3739d4,repondre:_0x5361ee}=_0x106004;if(!_0x2367bb[_0x180e50(0x1f9)])return _0x4324b4[_0x180e50(0x233)](_0x5361ee,_0x180e50(0x1f7));const _0x4f1b84=_0x2367bb[_0x180e50(0x243)]('\x20'),_0x362767='https://eliteprotech-apis.zone.id/copilot?q='+_0x4324b4[_0x180e50(0x233)](encodeURIComponent,_0x4f1b84);try{const _0x4bd703=await axios[_0x180e50(0x23c)](_0x362767),_0x2965ad=_0x4bd703[_0x180e50(0x1f5)]?.['text']||_0x180e50(0x1ff);return _0x4324b4[_0x180e50(0x233)](_0x5361ee,_0x2965ad);}catch(_0x59dd33){return console[_0x180e50(0x220)](_0x4324b4[_0x180e50(0x21a)],_0x59dd33),_0x4324b4[_0x180e50(0x233)](_0x5361ee,_0x4324b4[_0x180e50(0x201)]);}}),ovlcmd({'nom_cmd':_0x59c70f(0x232),'classe':'IA','react':'🤖','desc':_0x59c70f(0x228)},async(_0x53bb4c,_0x9dd3b1,_0x35e601)=>{const _0x52133d=_0x59c70f,_0x5a4213={'wvtxy':function(_0x6b63ce,_0x3d1437){return _0x6b63ce(_0x3d1437);},'AtMBA':_0x52133d(0x1f7),'QLlaD':_0x52133d(0x214),'RDFzW':_0x52133d(0x1fa)},{arg:_0x26920e,ms:_0x40972f,repondre:_0x5a9744,auteur_Message:_0x31969d}=_0x35e601;if(!_0x26920e['length'])return _0x5a4213[_0x52133d(0x20f)](_0x5a9744,_0x5a4213[_0x52133d(0x21e)]);const _0x53a33a=_0x26920e[_0x52133d(0x243)]('\x20'),_0x24386f='https://eliteprotech-apis.zone.id/gemini?prompt='+encodeURIComponent(_0x53a33a);try{const _0x328a57=await axios[_0x52133d(0x23c)](_0x24386f),_0x1be56a=_0x328a57['data']?.[_0x52133d(0x20e)]||_0x52133d(0x22c);return _0x5a4213[_0x52133d(0x20f)](_0x5a9744,_0x1be56a);}catch(_0x4991e7){return console[_0x52133d(0x220)](_0x5a4213[_0x52133d(0x247)],_0x4991e7),_0x5a9744(_0x5a4213[_0x52133d(0x245)]);}}),ovlcmd({'nom_cmd':_0x59c70f(0x202),'classe':'IA','react':'🤖','desc':_0x59c70f(0x226)},async(_0x16501d,_0x17afa4,_0x3df433)=>{const _0x4f9172=_0x59c70f,_0x5f564f={'EHHel':function(_0x257be4,_0x2b8c1d){return _0x257be4(_0x2b8c1d);},'SbEdh':_0x4f9172(0x1f7),'wLqER':function(_0x584e99,_0x73f68){return _0x584e99(_0x73f68);},'SZqKA':'Erreur\x20de\x20réponse\x20de\x20l\x27API\x20Llama.','pzutZ':function(_0x3b44d8,_0x221b7b){return _0x3b44d8(_0x221b7b);}},{arg:_0x474262,repondre:_0x3242f9}=_0x3df433;if(!_0x474262[_0x4f9172(0x1f9)])return _0x5f564f['EHHel'](_0x3242f9,_0x5f564f[_0x4f9172(0x23a)]);const _0x34bd2b=_0x474262[_0x4f9172(0x243)]('\x20'),_0x35d9d8=_0x4f9172(0x230)+_0x5f564f[_0x4f9172(0x213)](encodeURIComponent,_0x34bd2b);try{const _0x406ae5=await axios[_0x4f9172(0x23c)](_0x35d9d8),_0x1b502a=_0x406ae5[_0x4f9172(0x1f5)]?.[_0x4f9172(0x21c)]?.[_0x4f9172(0x21c)]||_0x5f564f[_0x4f9172(0x1f8)];return _0x5f564f[_0x4f9172(0x225)](_0x3242f9,_0x1b502a);}catch(_0x9290a2){return console[_0x4f9172(0x220)](_0x4f9172(0x1f4),_0x9290a2),_0x3242f9(_0x4f9172(0x1fa));}}),ovlcmd({'nom_cmd':_0x59c70f(0x22a),'classe':'IA','react':'🖤','desc':_0x59c70f(0x208)},async(_0x4914ca,_0x54efa8,_0x2b54c9)=>{const _0x5e86b1=_0x59c70f,_0x595ecc={'ZlvdK':_0x5e86b1(0x1f7),'WEfgH':'Erreur\x20de\x20réponse\x20de\x20l\x27API.','rCPoP':function(_0x3f52f8,_0x463b75){return _0x3f52f8(_0x463b75);},'StlbV':_0x5e86b1(0x241),'ImrtX':function(_0x42a33b,_0x4adef0){return _0x42a33b(_0x4adef0);},'RRAgr':'Une\x20erreur\x20est\x20survenue\x20lors\x20de\x20l\x27appel\x20à\x20l\x27API.'},{arg:_0x3452dd,ms:_0x1c21f1,repondre:_0x76524f}=_0x2b54c9;if(!_0x3452dd['length'])return _0x76524f(_0x595ecc['ZlvdK']);const _0x33abb9=_0x3452dd[_0x5e86b1(0x243)]('\x20'),_0x1a8813=_0x5e86b1(0x216)+encodeURIComponent(_0x33abb9);try{const _0x5a90c5=await axios[_0x5e86b1(0x23c)](_0x1a8813),_0x2c99ee=_0x5a90c5[_0x5e86b1(0x1f5)]?.[_0x5e86b1(0x1f5)]||_0x595ecc[_0x5e86b1(0x200)];return _0x595ecc[_0x5e86b1(0x231)](_0x76524f,_0x2c99ee);}catch(_0x305d2b){return console[_0x5e86b1(0x220)](_0x595ecc['StlbV'],_0x305d2b),_0x595ecc[_0x5e86b1(0x223)](_0x76524f,_0x595ecc['RRAgr']);}});
+const { ovl } = require('../lib/ovl');
+const axios = require('axios');
+
+async function askAI(prompt, model = "gpt-3.5-turbo") {
+    try {
+        let res = await axios.post('https://text.pollinations.ai/', {
+            messages: [{role: "user", content: prompt}],
+            model: model
+        });
+        return res.data;
+    } catch(e) { return "Erreur API. Réessaie" }
+}
+
+ovl({ nomCom: "gpt", categorie: "IA PRO", reaction: "🤖" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?gpt ta question");
+    repondre("*🤖 GPT-3.5 en cours...*");
+    let res = await askAI(arg.join(" "), "gpt-3.5-turbo");
+    repondre(`*🤖 GPT-3.5*\n\n${res}`);
+})
+
+ovl({ nomCom: "gpt4", categorie: "IA PRO", reaction: "🧠" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?gpt4 ta question");
+    repondre("*🧠 GPT-4 en cours...*");
+    let res = await askAI(arg.join(" "), "gpt-4");
+    repondre(`*🧠 GPT-4*\n\n${res}`);
+})
+
+ovl({ nomCom: "claude", categorie: "IA PRO", reaction: "👑" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?claude ta question");
+    repondre("*👑 Claude en cours...*");
+    let res = await askAI(arg.join(" "), "claude");
+    repondre(`*👑 CLAUDE 3*\n\n${res}`);
+})
+
+ovl({ nomCom: "gemini", categorie: "IA PRO", reaction: "💎" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?gemini ta question");
+    repondre("*💎 Gemini en cours...*");
+    let res = await askAI(arg.join(" "), "gemini");
+    repondre(`*💎 GEMINI PRO*\n\n${res}`);
+})
+
+ovl({ nomCom: "llama", categorie: "IA PRO", reaction: "🦙" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?llama ta question");
+    repondre("*🦙 Llama 3 en cours...*");
+    let res = await askAI(arg.join(" "), "llama");
+    repondre(`*🦙 LLAMA 3*\n\n${res}`);
+})
+
+ovl({ nomCom: "dalle", categorie: "IA PRO", reaction: "🎨" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?dalle une ville futuriste");
+    repondre("*🎨 Génération HD en cours...*");
+    let prompt = arg.join(" ") + ", 4k, ultra detailed";
+    let url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1024&height=1024`;
+    await zk.sendMessage(dest, { image: { url }, caption: `*DALLE 3* 🎨\n*Prompt:* ${prompt}` }, { quoted: ms });
+})
+
+ovl({ nomCom: "code", categorie: "IA PRO", reaction: "💻" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?code bot whatsapp en nodejs");
+    repondre("*💻 Génération de code...*");
+    let res = await askAI(`Ecris le code pour: ${arg.join(" ")}`, "gpt-4");
+    repondre(`*💻 CODE IA*\n\`\`${res}\`\``);
+})
+
+ovl({ nomCom: "logo", categorie: "IA PRO", reaction: "✨" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?logo OVL-MD");
+    repondre("*✨ Génération logo HD...*");
+    let text = arg.join(" ");
+    let url = `https://image.pollinations.ai/prompt/professional logo design, ${encodeURIComponent(text)}, 4k`;
+    await zk.sendMessage(dest, { image: { url }, caption: `*AI LOGO HD* ✨\n*Text:* ${text}` }, { quoted: ms });
+})// 9. SINGER IA - Génère paroles + chant
+ovl({ nomCom: "singer", categorie: "IA PRO", reaction: "🎤" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?singer chanson d'amour triste");
+    let topic = arg.join(" ");
+    repondre("*🎤 Génération de chanson en cours...*");
+    
+    // 1. Génère les paroles avec GPT
+    let paroles = await askAI(`Ecris les paroles d'une chanson ${topic}. 2 couplets + refrain. Style: émotionnel`, "gpt-3.5-turbo");
+    
+    await repondre(`*🎤 PAROLES IA*\n\n${paroles}\n\n*Note: Bientôt génération audio*`);
+})
+
+// 10. VOICE IA - Convertit texte en vocal
+ovl({ nomCom: "voice", categorie: "IA PRO", reaction: "🗣️" }, async (dest, zk, {ms, arg, repondre}) => {
+    if(!arg[0]) return repondre("Tape:?voice Bonjour comment ça va");
+    let text = arg.join(" ");
+    repondre("*🗣️ Génération vocal en cours...*");
+    
+    try{
+        // API TTS gratuite
+        let ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=fr&client=tw-ob`;
+        await zk.sendMessage(dest, { 
+            audio: { url: ttsUrl }, 
+            mimetype: 'audio/mpeg',
+            ptt: true 
+        }, { quoted: ms });
+    }catch(e){
+        repondre("Erreur vocal. Réessaie");
+    }
+})
